@@ -1,0 +1,87 @@
+AddLocationForm:
+
+<AddLocationForm>:
+    orientation: "vertical"
+    my_map: map
+    
+    dt: dtr
+    rw: rwy
+    sp: spo
+    sz: sze
+    spr: spre
+    ct: ctr
+    wm: wmi
+    wma : wmaa
+    
+    BoxLayout:
+        height: "40dp"
+        size_hint_y: None
+        
+        Button:
+            size_hint_x: 25
+            text: "Zobacz jak pojechales!"
+            on_press: root.Dane()
+    
+    BoxLayout:
+        orientation: 'vertical'
+        MapView:
+            lat: 0
+            lon: 0
+            zoom: 1
+            id: map
+    
+    BoxLayout:  
+        height: "45dp"
+        size_hint_y: None
+        Label:
+            size_hint_x: 40
+            text: "Dlugosc trasy"
+        TextInput:
+            size_hint_x: 25
+            id: dtr
+        Label:
+            size_hint_x: 45
+            text: "Roznica wysokosci"
+        TextInput:
+            size_hint_x: 20
+            id: rwy
+        Label:
+            size_hint_x: 40
+            text: "Suma podejsc"
+        TextInput:
+            size_hint_x: 25
+            id: spo
+        Label:
+            size_hint_x: 40
+            text: "Suma zejsc"
+        TextInput:
+            size_hint_x: 25
+            id: sze   
+    BoxLayout:  
+        height: "45dp"
+        size_hint_y: None
+        Label:
+            size_hint_x: 40
+            text: "Srednia predkosc"
+        TextInput:
+            size_hint_x: 25
+            id: spre
+        Label:
+            size_hint_x: 45
+            text: "Czas treningu"
+        TextInput:
+            size_hint_x: 20
+            id: ctr
+        Label:
+            size_hint_x: 40
+            text: "Wysokosc min" 
+        TextInput:
+            size_hint_x: 25
+            id: wmi
+        Label:
+            size_hint_x: 40
+            text: "Wysokosc max"
+        TextInput:
+            size_hint_x: 25
+            id: wmaa   
+   
